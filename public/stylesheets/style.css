@@ -18,3 +18,16 @@ a {
     filter: alpha(opacity=60);
     color: #fff;   
 }
+
+h1{
+  padding: 50px;
+}
+
+#navbar{
+    font: 16px fantasy, Helvetica, Arial, sans-serif black bold;
+    padding: 20px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    opacity: 0.7;
+    filter: alpha(opacity=60);
+}
