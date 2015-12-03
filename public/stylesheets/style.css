@@ -1,0 +1,20 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("../img/logo.png") no-repeat center center fixed;
+    background-size: cover;   
+}
+
+a {
+  color: #00B7FF;
+}
+
+#text-box{
+    padding: 50px;
+    font: 14px fantasy, Helvetica, Arial, sans-serif black bold;
+    background-color: darkred;
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=60);
+    color: #fff;   
+}
