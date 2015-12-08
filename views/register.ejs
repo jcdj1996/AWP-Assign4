@@ -1,15 +1,10 @@
-<% include partials/header.ejs %>	
+<%- include ../public/partials/header.ejs %>
 	
 	<!-- Render the Registration form  -->
 	<main class="container">
-	
-	<!-- Display flash messages  -->
-	<% if (messages.length > 0) { %>
-        <div class="alert alert-danger"><%= messages %></div>
-      <% } %>
-		
 		<h1>Registration</h1>
-		<div class="col-sm-4">
+		<div class="container-fluid">
+			<div id="register">
 			<form method="post">
 				<fieldset class="form-group">
 					<label for="companyName">Company Name: *</label>
@@ -17,7 +12,7 @@
 				</fieldset>
 				
 				<fieldset class="form-group">
-					bel for="email">Email: *</label>
+					<label for="email">Email: *</label>
 					<input name="email" type="email" required class"form-control"/>
 				</fieldset>
 				
@@ -33,10 +28,11 @@
 				<fieldset class="form-group text-right">
 					<input type="submit" class="btn btn-success" value="Submit"/>
 				</fieldset>
-			</form
+			</form>
+			</div>
 		</div>
 	</main>
-<% include partials/footer.ejs %>
+<%- include ../public/partials/footer.ejs %>
 
 <!--KarenS - Dec2/15
 Just started building this registration page.  

@@ -12,4 +12,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'AWP Assignment 4' });
 });
 
+//GET the Register User Page. */
+router.get('/register', function(req, res, next){
+  res.render('register', { title: 'AWP Assignment 4 | Register' });
+});
+
 module.exports = router;
