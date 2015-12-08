@@ -1,3 +1,7 @@
+
+html{
+  background-color:rgb(255, 255, 204);
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -9,14 +13,16 @@ a {
   color: #950B0B;
 }
 
+
 #text-box, .well{
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif black bold;
-    background-color: rgba(170,57,57,.9);
+    background-color: rgba(200,57,57,.9);
     border: 1px solid black;
     opacity: 0.9;
     filter: alpha(opacity=60);
     color: #fff;   
+    background-image: linear-gradient(to bottom,#e8e8e8 0,rgba(200,200,200,.5) 100%);
 }
 
 .well{
@@ -25,7 +31,9 @@ a {
 
 .tab-content{
   background-color: rgba(170,57,57,.5);
+  filter: alpha(opacity=60);
   padding: 10px;
+  background-image: linear-gradient(to bottom,#e8e8e8 0,rgba(200,200,200,.5) 100%);
 }
 label{
   width:100px;
