@@ -12,6 +12,4 @@ function($scope){
 ];
 }]);
 
-//I think this should be changed to show survey options. 
-//I have a couple of pictures that could go along with different types of 
-//surveys.  Example: planning a get together (dates), controversial..etc...
+
