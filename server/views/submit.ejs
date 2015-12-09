@@ -5,45 +5,73 @@
 	
 
 		<div class="jumbotron">
-				<input type="text" id="surveyName" required class="form-control" placeholder="Survey Name">
+			<container>
+				<input type="text" id="surveyName" required class="form-control" placeholder="Untitled Survey">
 				<fieldset class="form-group"></br>
 					<label for="upload" class="control-label"><h4>Select logo</h4></label>
 					<input class="form-control" style="width:250px; text-align: center;" name="upload" type="file">
 				</fieldset>
-		
+			</container>
 			</br>
-			<!--<h3>Choose which kind of question you would like to ask.</h3>-->
 
-			<ul class="nav nav-tabs">
-				<li class="active"><a data-toggle="tab" href="#multipleChoice">Multiple Choice</a></li>
-				<li><a data-toggle="tab" href="#aord">Agree or Disagree</a></li>
-				<li><a data-toggle="tab" href="#shortAnswer">Short Answer</a></li>
-			</ul>
+			<div class="dropdown">
+				<button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Question Type
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="questionDropDown">
+					<li><a href="#">Multiple Choice</a></li><!--multiple choice options appear -->
+					<li><a href="#">Agree or Disagree</a></li> <!-- agree or disagree options appear -->
+					<li><a href="#">Short Answer</a></li> <!--Short answer options appear -->
+				</ul>
+				</div>
 			</br>
 			<form class="multipleChoiceForm">
 				<fieldset class="form-group">
-					<input type="text" placeholder="Question" class="form-control" style="width:700px" /> </br>
+					<input type="text" placeholder="Untitled Question" class="form-control" style="width:700px" /> </br>
 				</fieldset>
-				<fieldset>	
+				<fieldset class="form-group">	
 					<div class="radio">
 						<input type="radio" name="radios" id="radio1" value="1" checked="checked">
 						<input type="text" name="option1" placeholder="Answer 1" class="form-control" id="questionBox"/>
-					<div>
+					</div>
 				</fieldset>
-				<fieldset>	
+				<fieldset class="form-group">	
 					<div class="radio">
 						<input type="radio" name="radios" id="radio2" value="1">
 						<input type="text" name="option2" placeholder="Answer 2" class="form-control" id="questionBox"/>
 					</div>
 				</fieldset>
-					<input type="button" class="btn btn-default" value="+"> <!--add more multiple choice options -->
-
-				<input type="submit" class="btn btn-danger value=" value="Save"/> 
+					<input type="button" class="btn btn-info" value="+"> <!--add more multiple choice options -->
+					<input type="submit" class="btn btn-success value=" value="Save"/> <!-- saves question -->
 			</form>
+			<form class="aordForm">
+				<fieldset class="from-Group">
+					<div class="radio">
+						<input type="radio" name="radios" id="radio1" value="1" checked="checked">
+						<label for="radio1" id="questionBox">Agree</label>
+					</div>
+				</fieldset>
+				<fieldset class="form-group">	
+					<div class="radio">
+						<input type="radio" name="radios" id="radio2" value="1">
+						<label for="radio1" id="questionBox">Disagree</label>
+					</div>
+						<input type="submit" class="btn btn-success value=" value="Save"/> <!-- saves question -->
+				</fieldset>
+
+			</form>
+				<form class="shortAnswer">
+					<fieldset class="form-group">
+						<textarea class="form-control" rows="3" placeholder="Short Answer"></textarea>
+					</fieldset>
+						<input type="submit" class="btn btn-success value=" value="Save"/> <!-- saves question -->
+				</form>
+
 		</div> 
 	</main>
-</main>
 <%- include partials/footer.ejs %>
-
+<%- include partials/boot.ejs %>
+<%- include partials/nglib.ejs %>
 <!-- Create Page : Karen -->
 <!-- Implement multiple choice structure : Amanda-->
