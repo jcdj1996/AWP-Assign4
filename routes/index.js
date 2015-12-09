@@ -17,4 +17,22 @@ router.get('/register', function(req, res, next){
   res.render('register', { title: 'AWP Assignment 4 | Register' });
 });
 
+//Render LOGIN page. //
+router.get('/login', function (req, res, next){
+  if(!req.user) {
+    console.log("rendering login");
+    res.render('login', {
+      title: 'Login',
+      messages:req.flash('loginMessage'),
+      displayName:req.user ? req.user.displayName : ''
+    });
+    return;
+  }
+  else {
+    return res.redirect('/users');
+  }
+});
+
 module.exports = router;
+
+//added in the registration and login : Karen Springford//
