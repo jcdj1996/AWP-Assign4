@@ -1,43 +1,49 @@
 <%- include partials/header.ejs %>
 
-  <h1>Submit</h1>
-  <p>Choose which kind of question you would like to ask</p>
+	<main class="container-fluid">
+		<div class="page-header" id="title">Create a Survey</div>
+	
 
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#two">Two Options</a></li>
-    <li><a data-toggle="tab" href="#five">Five Options</a></li>
-  </ul>
+		<div class="jumbotron">
+				<input type="text" id="surveyName" required class="form-control" placeholder="Survey Name">
+				<fieldset class="form-group"></br>
+					<label for="upload" class="control-label"><h4>Select logo</h4></label>
+					<input class="form-control" style="width:250px; text-align: center;" name="upload" type="file">
+				</fieldset>
+		
+			</br>
+			<!--<h3>Choose which kind of question you would like to ask.</h3>-->
 
-  <div class="tab-content">
-  <div id="two" class="tab-pane fade in active">
-     <br/>
-     <form>
-	<label for="question">Question: </label>
-	<input type="text" name="question"/><br/>
-	<label for="option0">Option 0: </label>
-	<input type="text" name="option0"/><br/>
-	<label for="option1">Option 1: </label>
-	<input type="text" name="option1"/><br/>
-	<input type="submit" value="Save"/>
-    </form>
-  </div>
-  <div id="five" class="tab-pane fade">
- <br/>
-     <form>
-	<label for="question">Question: </label>
-	<input type="text" name="question"/><br/>
-	<label for="option0">Option 0: </label>
-	<input type="text" name="option0"/><br/>
-	<label for="option1">Option 1: </label>
-	<input type="text" name="option1"/><br/>
-	<label for="option2">Option 2: </label>
-	<input type="text" name="option2"/><br/>
-	<label for="option2">Option 3: </label>
-	<input type="text" name="option3"/><br/>
-	<label for="option2">Option 4: </label>
-	<input type="text" name="option4"/><br/>
-	<input type="submit" value="Save"/>
-    </form>
-  </div>
-</div>
+			<ul class="nav nav-tabs">
+				<li class="active"><a data-toggle="tab" href="#multipleChoice">Multiple Choice</a></li>
+				<li><a data-toggle="tab" href="#aord">Agree or Disagree</a></li>
+				<li><a data-toggle="tab" href="#shortAnswer">Short Answer</a></li>
+			</ul>
+			</br>
+			<form class="multipleChoiceForm">
+				<fieldset class="form-group">
+					<input type="text" placeholder="Question" class="form-control" style="width:700px" /> </br>
+				</fieldset>
+				<fieldset>	
+					<div class="radio">
+						<input type="radio" name="radios" id="radio1" value="1" checked="checked">
+						<input type="text" name="option1" placeholder="Answer 1" class="form-control" id="questionBox"/>
+					<div>
+				</fieldset>
+				<fieldset>	
+					<div class="radio">
+						<input type="radio" name="radios" id="radio2" value="1">
+						<input type="text" name="option2" placeholder="Answer 2" class="form-control" id="questionBox"/>
+					</div>
+				</fieldset>
+					<input type="button" class="btn btn-default" value="+"> <!--add more multiple choice options -->
+
+				<input type="submit" class="btn btn-danger value=" value="Save"/> 
+			</form>
+		</div> 
+	</main>
+</main>
 <%- include partials/footer.ejs %>
+
+<!-- Create Page : Karen -->
+<!-- Implement multiple choice structure : Amanda-->

@@ -1,19 +1,20 @@
 <%- include partials/header.ejs %>
      <main class="container">
-      <h1>Please Login</h1>
-      <div class="container">
-           <form method="post">
-                <fieldset class="form-group">
+      <div class="page-header" id="title">Please Login</div>
+      <div class="jumbotron">
+          
+           <form method="post" >
+                <fieldset class="form-group" class="sr-only">
                     <label>Username:</label>
-                    <input type="text" class="form-control" name="username" required autofocus/>
+                    <input type="text" class="form-control" id="loginForm"name="username" required autofocus/>
                  </fieldset>
                  <fieldset class="form-group">
                     <label>Password:</label>
-                    <input type="password" class="form-control" name="password" required/>
+                    <input type="password" class="form-control" id="loginForm" name="password" required/>
                     or <a href="/register">Register</a>
                 </fieldset>
-                <fieldset class="form-group text-right">
-                    <input type="submit" class="btn btn-success" value="Log In"/>
+                <fieldset class="form-group ">
+                    <input type="submit" class="btn btn-danger" value="Log In"/>
                </fieldset>
             </form>
          </div>

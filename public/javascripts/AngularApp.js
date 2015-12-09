@@ -4,11 +4,11 @@ app.controller('MainCtrl', [
 '$scope',
 function($scope){
   $scope.posts = [
-  'post 1',
-  'post 2',
-  'post 3',
-  'post 4',
-  'post 5'
+  'Register for an Account',
+  'Login to Your Account',
+  'Create and Manage your Surveys',
+  'Review your Results',
+  'Send Yourself Stats and Responses via Email'
 ];
 }]);
 

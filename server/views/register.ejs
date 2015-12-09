@@ -2,34 +2,34 @@
 	
 	<!-- Render the Registration form  -->
 	<main class="container">
-		<h1>Registration</h1>
-		<div class="container-fluid">
-			<div id="register">
+		<div class="page-header" id="title">Registration</div>
+		<div class="jumbotron"> <!--container-fluid -->
+			<!--<div id="register"> -->
 			<form method="post">
 				<fieldset class="form-group">
-					<label for="companyName">Company Name: *</label>
-					<input name="companyName" type="name" class="form-control" />
+					<label for="companyName" style="display: inline;">Company Name: *</label>
+					<input name="companyName" type="name" class="form-control" id="registrationForm" required />
 				</fieldset>
 				
 				<fieldset class="form-group">
-					<label for="email">Email: *</label>
-					<input name="email" type="email" required class"form-control"/>
+					<label for="email" style="display: inline;">Email: *</label>
+					<input name="email" type="email" required class="form-control" id="registrationForm" required/>
 				</fieldset>
 				
 				<fieldset class="form-group">
-					<label for="username">Username: *</label>
-					<input name="username" type="text" class="form-control" required />
+					<label for="username" style="display: inline;">Username: *</label>
+					<input name="username" type="text" class="form-control" id="registrationForm" required />
 				</fieldset>
 				
 				<fieldset class="form-group">
-					<label for="password">Password: *</label>
-					<input name="password" type="password" class="form-control" required />
+					<label for="password" style="display: inline;">Password: *</label>
+					<input name="password" type="password" class="form-control" id="registrationForm" required />
 				</fieldset>
-				<fieldset class="form-group text-right">
-					<input type="submit" class="btn btn-success" value="Submit"/>
+				<fieldset class="form-group">
+					<input type="submit" class="btn btn-danger" value="Submit"/>
 				</fieldset>
 			</form>
-			</div>
+			<!-- </div> -->
 		</div>
 	</main>
 <%- include partials/footer.ejs %>
