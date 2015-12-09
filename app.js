@@ -5,24 +5,58 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
+var session = require('express-session');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// additions for authentication
+var mongoose = require('mongoose');
+var flash = require('connect-flash');
+var passport = require('passport');
+
+//DB Setup
+var DB = require('./server/config/db.js');
+mongoose.connect(DB.url);
+mongoose.connection.on('error', function () {
+  console.error('MongoDB Connection Error');
+});// live
+//mongoose.connect('mongodb://afield788:joey77@ds048368.mongolab.com:43027/assignment1');
+
+// check connection
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'DB Error: '));
+db.once('open', function(callback) {
+  console.log('Connected to mongodb');
+});
+
+
+//Routes Setup
+var routes = require('./server/routes/index');
+var users = require('./server/routes/users');
+var flash = require('connect-flash');
 
 var app = express();
-app.use(favicon(__dirname+'/public/favicon.ico'));
+//app.use(favicon(__dirname+'./public/favicon.ico'));
+
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './server/views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  secret: 'someSecret',
+  saveUninitialized: true,
+  resave: true
+})
+  );
+
+app.use(flash());
 app.use('/', routes);
 app.use('/users', users);
 
