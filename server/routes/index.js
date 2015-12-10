@@ -9,10 +9,16 @@ function requireAuth(req, res, next){
 
   // check if the user is logged in
   if(!req.isAuthenticated()){
+    {login : false};
     return res.redirect('/login');
+  } else {
+    {login : true};
   }
   next();
 }
+
+
+
 
 //GET Submit Page
 router.get('/submit', function(req, res, next) {
@@ -21,7 +27,8 @@ router.get('/submit', function(req, res, next) {
 
 //Get About Page
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'AWP Assignment 4 | About' });
+  res.render('about', { title: 'AWP Assignment 4 | About',
+                          });
 });
 /* GET home page. */
 router.get('/', function(req, res, next) {

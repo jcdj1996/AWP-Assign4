@@ -12,13 +12,16 @@ var mongoose = require('mongoose');
 var flash = require('connect-flash');
 var passport = require('passport');
 
-//DB Setup
+/*Local DB Setup
 var DB = require('./server/config/db.js');
 mongoose.connect(DB.url);
 mongoose.connection.on('error', function () {
   console.error('MongoDB Connection Error');
-});// live
-//mongoose.connect('mongodb://afield788:joey77@ds048368.mongolab.com:43027/assignment1');
+});// live */
+
+//connect to mongoLab account
+mongoose.connect('mongodb://afield:joey77@ds037814.mongolab.com:37814/heroku_gftj0f7r');
+
 
 // check connection
 var db = mongoose.connection;
@@ -28,6 +31,7 @@ db.once('open', function(callback) {
 });
 
 
+
 //Routes Setup
 var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
@@ -35,6 +39,9 @@ var flash = require('connect-flash');
 
 var app = express();
 //app.use(favicon(__dirname+'./public/favicon.ico'));
+
+// passport configuration
+require('./server/config/passport')(passport);
 
 
 // view engine setup
@@ -56,7 +63,14 @@ app.use(session({
 })
   );
 
+
+
 app.use(flash());
+
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', routes);
 app.use('/users', users);
 
@@ -93,3 +107,5 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+//implemented mongoLab db

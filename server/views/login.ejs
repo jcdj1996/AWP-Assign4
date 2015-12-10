@@ -1,24 +1,28 @@
 <%- include partials/header.ejs %>
-     <main class="container">
-      <div class="page-header" id="title">Please Login</div>
-      <div class="jumbotron">
-          
-           <form method="post" >
-                <fieldset class="form-group" class="sr-only">
-                    <label>Username:</label>
-                    <input type="text" class="form-control" id="loginForm"name="username" required autofocus/>
-                 </fieldset>
-                 <fieldset class="form-group">
-                    <label>Password:</label>
-                    <input type="password" class="form-control" id="loginForm" name="password" required/>
-                    or <a href="/register">Register</a>
-                </fieldset>
-                <fieldset class="form-group ">
-                    <input type="submit" class="btn btn-danger" value="Log In"/>
-               </fieldset>
-            </form>
-         </div>
-    </main>
-<%- include partials/footer.ejs %>
-
+<main class="container">
+  <div class="page-header" id="title">Please Login</div>
+  <div class="jumbotron">
+    <% if (messages.length > 0) { %>
+    <div class="alert alert-danger"><%= messages %></div>
+    <% } %>
+    <form method="post" >
+    <fieldset class="form-group" class="sr-only">
+      <label>Username:</label>
+      <input type="text" class="form-control" id="loginForm"name="username" required autofocus/>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Password:</label>
+      <input type="password" class="form-control" id="loginForm" name="password" required/>
+      or <a href="/register">Register</a>
+    </fieldset>
+    <fieldset class="form-group ">
+      <input type="submit" class="btn btn-danger" value="Login"/>
+    </fieldset>
+    </form>
+  </div>
+</main>
+<% include partials/boot.ejs %>
+<% include partials/footer.ejs %>
 <!--Added in the login.ejs file...still work in progress : Karen Springford -->
+<!-- Added styling and functionality to login - Amanda Dec 10th -->
+<!-- Shrunk code 0457 15 dec 2015 Ari -->

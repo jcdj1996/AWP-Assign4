@@ -4,19 +4,15 @@ var router = express.Router();
 
 var User = require('../models/user');
 
-
-/* GET users listing. 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-*/
-
 /* Utility functin to check if user is authenticatd */
 function requireAuth(req, res, next){
 
   // check if the user is logged in
   if(!req.isAuthenticated()){
+    
     return res.redirect('/login');
+  } else {
+
   }
   next();
 }
@@ -130,5 +126,3 @@ router.get('/delete/:id', requireAuth, function (req, res, next) {
 });
 
 module.exports = router;
-
-// Implement user session functionality: Amanda // 
