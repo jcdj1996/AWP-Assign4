@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <meta http-equiv="X-UA-Compatible" content="IE-edge">
   <meta name="viewport" content="width = device-width, initial-scale =1">
   <head>
@@ -21,7 +22,7 @@
     
   </head>
   
-  <body ng-app="survey-site" ng-controller="MainCtrl">
+  <body >
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -30,8 +31,6 @@
               <span class="icon-bar">Home</span>
               <span class="icon-bar">About</span>
               <span class="icon-bar"></span>
-              <span class="icon-bar">Register</span>
-              <span class="icon-bar">Login</span>
             </button>
             <img src="./img/smallDarkLogo.png" />
           </div>
@@ -40,8 +39,7 @@
               <li <% if(title =='AWP Assignment 4'){%>class="active"<%}%>><a href="/">Home</a></li>
               <li <% if(title =='AWP Assignment 4 | About'){ %>class="active"<%}%>><a href="/about">About</a></li>
               <li <% if(title =='AWP Assignment 4 | Submit'){ %>class="active"<%}%>><a href="/submit">Submit a Survey</a></li>
-              <li <% if(title =='AWP Assignment 4 | Register'){ %>class="active"<%}%>><a href="/register">Register</a></li>
-              <li <% if(title =='AWP Assignment 4 | Login'){ %>class="active"<%}%>><a href="/login">Login</a></li>
+         
             </ul>
             <ul class="nav navbar-nav pull-right">
               <li> <a id ="companyTitle" href="/">King and Queen's Surveys</a></li>
@@ -50,3 +48,4 @@
       </nav>
       
       <!--Added in the Register and Login:Karen Springford -->
+      <!--Add in company name and get rid of login and register -->

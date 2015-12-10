@@ -2,7 +2,9 @@
      <main class="container">
       <div class="page-header" id="title">Please Login</div>
       <div class="jumbotron">
-          
+              <% if (messages.length > 0) { %>
+        <div class="alert alert-danger"><%= messages %></div>
+      <% } %>
            <form method="post" >
                 <fieldset class="form-group" class="sr-only">
                     <label>Username:</label>
@@ -14,11 +16,15 @@
                     or <a href="/register">Register</a>
                 </fieldset>
                 <fieldset class="form-group ">
-                    <input type="submit" class="btn btn-danger" value="Log In"/>
+                    <input type="submit" class="btn btn-danger" value="Login"/>
                </fieldset>
+               
             </form>
          </div>
     </main>
-<%- include partials/footer.ejs %>
+<% include partials/boot.ejs %>
+
+<% include partials/footer.ejs %>
+
 
 <!--Added in the login.ejs file...still work in progress : Karen Springford -->

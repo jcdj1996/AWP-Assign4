@@ -1,9 +1,10 @@
-<%- include partials/header.ejs %>
-    <div class="container-fluid">
+<% include partials/header.ejs %>
+    <div class="container-fluid" ng-app="survey-site" ng-controller="MainCtrl">
     <div class="page-header" id="title">Go Ahead - It's Simple</div>
     <!-- div class="well" -->
       <div class="jumbotron" ng-repeat="post in posts">
         <h3>{{post}}</h3>
       </div>
     </div>
-<%- include partials/footer.ejs %>
+<% include partials/boot.ejs %>
+<% include partials/footer.ejs %>

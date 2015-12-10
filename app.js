@@ -36,6 +36,9 @@ var flash = require('connect-flash');
 var app = express();
 //app.use(favicon(__dirname+'./public/favicon.ico'));
 
+// passport configuration
+require('./server/config/passport')(passport);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, './server/views'));
@@ -56,7 +59,12 @@ app.use(session({
 })
   );
 
+
+
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', routes);
 app.use('/users', users);
 
