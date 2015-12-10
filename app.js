@@ -28,6 +28,7 @@ db.once('open', function(callback) {
 });
 
 
+
 //Routes Setup
 var routes = require('./server/routes/index');
 var users = require('./server/routes/users');
@@ -62,6 +63,8 @@ app.use(session({
 
 
 app.use(flash());
+
+//passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
