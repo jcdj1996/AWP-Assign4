@@ -1,3 +1,6 @@
 There is a directory called /bower_component
     -> the same files are located in /public/lib
 ARE THE DUPLICATES NECESSARY?
+
+everypage requires bootstrap 
+WHY IS IT NOT IN EVERY FOOTER?
