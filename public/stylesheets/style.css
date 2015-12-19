@@ -1,0 +1,43 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url("../img/logo.png") no-repeat center center fixed;
+  background-size: cover;   
+}
+
+a {
+  color: #950B0B;
+}
+
+#text-box, .well{
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif black bold;
+    background-color: rgba(170,57,57,.9);
+    border: 1px solid black;
+    opacity: 0.9;
+    filter: alpha(opacity=60);
+    color: #fff;   
+}
+
+.well{
+      background-image: linear-gradient(to bottom,#e8e8e8 0,rgba(200,200,200,.5) 100%);
+}
+
+.tab-content{
+  background-color: rgba(170,57,57,.5);
+  padding: 10px;
+}
+label{
+  width:100px;
+}
+input{
+  width:100px;
+}
+
+/*KarenS Dec2/15
+Added the text box colors, will change to funner(?) color
+adjusted spacing issues to line up the text boxes*/
+
+
+
+
